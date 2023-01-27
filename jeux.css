@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #8BC6EC;
+  background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+  
+  height: 100vh
+}
+nav {
+  position: absolute;
+  left:45% ;
+  top: 30%;
+}
+ul {
+  text-align: center;
+}
+ul:hover li a {
+  opacity: 0;
+}
+ul li {
+  margin: 14px 0;
+  list-style: none;
+}
+ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  background-color: darkblue;
+  padding: 6px 15px;
+  display: block;
+  text-transform: uppercase;
+  width: 120px;
+  transition: 0.5s;
+  border-radius: 15px;
+}
+ul li a:hover {
+  transform: scale(1.5);
+  background: darkmagenta;
+  opacity: 1;
+}
+ul li::after {
+  content: attr(data-text);
+  color: white;
+  position: absolute;
+  left: 40%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 50px ;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+   
+}
+ul li:hover::after{
+    opacity: 0.5;
+    letter-spacing: 5px;
+}
